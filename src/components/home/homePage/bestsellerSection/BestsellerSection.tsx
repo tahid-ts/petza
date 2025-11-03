@@ -114,6 +114,7 @@ export default function BestsellerSection() {
           </h1>
           <Button
             size="sm"
+            href="/shop"
             variant="iconOnly"
             className="text-gray-700!  hover:text-gray-900 font-medium"
           >

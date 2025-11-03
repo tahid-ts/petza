@@ -142,7 +142,10 @@ const TrendingProductsSection = () => {
               >
                 Trending Products
               </Title>
-              <Link className="text-dark border-b border-primary" href={"/#"}>
+              <Link
+                className="text-dark border-b border-primary"
+                href={"/shop"}
+              >
                 View All
               </Link>
             </div>
