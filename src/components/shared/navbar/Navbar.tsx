@@ -103,7 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({ userType = "guest", navItems }) => {
                   label={
                     <span
                       className={clsx(
-                        "font-title py-0! my-0! text-[16px] text-black cursor-pointer transition-colors hover:text-primary border-none!",
+                        "font-title py-0! my-0! text-[16px] text-black cursor-pointer transition-colors hover:text-primary border-none! group-hover:text-primary",
                         bold ? "font-bold" : "font-normal"
                       )}
                     >
@@ -116,7 +116,7 @@ const Navbar: React.FC<NavbarProps> = ({ userType = "guest", navItems }) => {
                   itemClassName=" hidden"
                   menuContainerClass="mt-7 p-0!"
                   contentClass="pb-0! px-0!"
-                  triggerIconClass="group-hover:text-primary font-bold"
+                  triggerIconClass="group-hover:text-primary font-bold cursor-pointer"
                 />
               );
             }

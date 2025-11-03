@@ -27,7 +27,7 @@ export const CartShippingInfoSection = memo(function CartShippingInfoSection({
           {formatCurrency(remainingForCashback)}
         </span>
         <span className="text-gray-700"> away from earning </span>
-        <span className="text-orange-500 font-semibold">5% EXTRA CASHBACK</span>
+        <span className="text-primary font-semibold">5% EXTRA CASHBACK</span>
       </p>
 
       <CartProgressBarSection progressPercentage={progressPercentage} />
@@ -41,9 +41,7 @@ export const CartShippingInfoSection = memo(function CartShippingInfoSection({
           <div className="font-bold text-gray-900">
             {formatCurrency(FREE_SHIPPING_THRESHOLD)}
           </div>
-          <div className="text-orange-500 font-semibold mt-0.5">
-            5% CASHBACK
-          </div>
+          <div className="text-primary font-semibold mt-0.5">5% CASHBACK</div>
         </div>
       </div>
     </section>

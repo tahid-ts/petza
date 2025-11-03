@@ -115,7 +115,7 @@ const OrderRow: React.FC<{ order: Order }> = ({ order }) => {
             type="checkbox"
             checked={selected}
             onChange={(e) => setSelected(e.target.checked)}
-            className="w-4 h-4 accent-orange-500"
+            className="w-4 h-4 accent-primary"
           />
           <div>
             <div className="text-xs text-gray-500 mb-1">Order ID</div>
@@ -149,7 +149,7 @@ const OrderRow: React.FC<{ order: Order }> = ({ order }) => {
               order.paymentStatus === "paid"
                 ? "text-green-600"
                 : order.paymentStatus === "pending"
-                ? "text-orange-500"
+                ? "text-primary"
                 : "text-red-500"
             }`}
           >

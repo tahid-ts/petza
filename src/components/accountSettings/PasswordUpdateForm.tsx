@@ -79,7 +79,7 @@ const PasswordUpdateForm: React.FC = () => {
                 Forgot Password
               </button>
 
-              <SubmitButton className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-medium  gap-2">
+              <SubmitButton className="bg-primary hover:bg-primary text-white px-8 py-3 rounded-lg font-medium  gap-2">
                 <div className="flex gap-2 items-center justify-between">
                   <span>Change Password</span>
                   <span>

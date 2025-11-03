@@ -22,8 +22,8 @@
 //           onClick={() => onTopicClick(topic.name)}
 //           className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
 //             selectedTopic === topic.name
-//               ? "bg-orange-500 text-white shadow-sm"
-//               : "bg-gray-100 text-gray-700 hover:bg-orange-100 hover:text-orange-600"
+//               ? "bg-primary text-white shadow-sm"
+//               : "bg-gray-100 text-gray-700 hover:bg-orange-100 hover:text-primary"
 //           }`}
 //         >
 //           {topic.name}
@@ -57,7 +57,7 @@ export const BlogTopicsCloud: React.FC<BlogTopicsCloudProps> = ({ topics }) => {
         <button
           key={topic.name}
           onClick={() => handleTopicClick(topic.name)}
-          className="px-3 py-1.5 border border-border-color-one text-gray-700 rounded-lg text-xs hover:bg-orange-100 hover:text-orange-600 transition-colors"
+          className="px-3 py-1.5 border border-border-color-one text-gray-700 rounded-lg text-xs hover:bg-orange-100 hover:text-primary transition-colors"
         >
           {topic.name}
         </button>

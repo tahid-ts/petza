@@ -17,7 +17,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   return (
     <div className="flex flex-col items-end animate-slide-up duration-700 ease-bounce offset-medium">
       <div
-        className="md:w-[213px] md:h-[213px] w-[175px] h-[175px] rounded-full border-[3px] border-orange-500 flex items-center justify-center bg-white relative"
+        className="md:w-[213px] md:h-[213px] w-[175px] h-[175px] rounded-full border-[3px] border-primary flex items-center justify-center bg-white relative"
         style={{
           backgroundImage: "url(/img/basic-needs/basic-needs-shape1_1.png)",
           backgroundPosition: "center",

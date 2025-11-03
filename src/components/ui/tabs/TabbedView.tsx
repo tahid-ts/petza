@@ -45,15 +45,15 @@ const TabbedView: React.FC<TabbedViewProps> = ({
 
   const tabClasses = (selected: boolean) =>
     isCard
-      ? `px-4 py-2 rounded-md! font-medium transition-all duration-200 ${
+      ? `px-4 py-2 rounded-md! cursor-pointer font-medium transition-all duration-200 ${
           selected
-            ? "bg-primary! text-white! border border-primary!"
+            ? "bg-primary! cursor-pointer text-white! border border-primary!"
             : "text-gray-700 border border-primary"
         }`
-      : `px-4 pb-5 pt-3 transition-colors duration-200 relative text-2xl font-bold font-title ${
+      : `px-4 pb-5 cursor-pointer pt-3 transition-colors duration-200 relative text-2xl font-bold font-title ${
           selected
-            ? "font-bold bg-transparent! focus:ring-0! focus:border-t-none! text-dark outline-none hover:text-primary!"
-            : "text-gray-500 hover:text-primary!"
+            ? "font-bold cursor-pointer bg-transparent! focus:ring-0! focus:border-t-none! text-dark outline-none hover:text-primary!"
+            : "text-gray-500 cursor-pointer hover:text-primary!"
         }`;
   const getTabsContainerJustifyClass = () => {
     switch (tabPosition) {
@@ -73,13 +73,13 @@ const TabbedView: React.FC<TabbedViewProps> = ({
       className={`${className} ${isCard ? "" : "pr-0"}`}
     >
       <ScrollAnimator
-        effect="slideInLeft"
+        effect="blurIn"
         className="overflow-hidden"
         repeatOnScroll
         duration={1.5}
       >
         <TabList
-          className={`flex lg:flex-row flex-col md:gap-6 gap-4 justify-between border-b outline-none ring-0 mb-8 ${
+          className={`flex lg:flex-row flex-col md:gap-6 gap-4 justify-between  border-b outline-none ring-0 mb-8 ${
             isCard ? "pb-5 border-primary/35 z-10" : "border-gray-200"
           }`}
         >

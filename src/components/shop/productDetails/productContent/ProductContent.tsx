@@ -16,7 +16,7 @@ const ProductContent = () => {
   const [quantity, setQuantity] = useState(1);
 
   const colors = [
-    { name: "orange", value: "#FF6B4A" },
+    { name: "orange", value: "#fa6c41" },
     { name: "red", value: "#EF4444" },
     { name: "blue", value: "#3B82F6" },
   ];
@@ -32,7 +32,7 @@ const ProductContent = () => {
       <div className="flex items-center gap-2 mb-3">
         <span className="flex gap-0.5">
           {[...Array(5)].map((_, i) => (
-            <Star key={i} className="h-4 w-4 fill-amber-500 text-amber-500" />
+            <Star key={i} className="h-4 w-4 fill-primary text-primary" />
           ))}
         </span>
         <span className="text-sm text-gray-600">(260 Customer Reviews)</span>
@@ -146,25 +146,25 @@ const ProductContent = () => {
         <p className="text-sm font-semibold mb-3">Share:</p>
         <div className="flex gap-3">
           <button
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors"
+            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
             aria-label="Share on WhatsApp"
           >
             <FaWhatsapp size={18} />
           </button>
           <button
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors"
+            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
             aria-label="Share on Facebook"
           >
             <FaFacebookF size={18} />
           </button>
           <button
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors"
+            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
             aria-label="Share on LinkedIn"
           >
             <FaLinkedinIn size={18} />
           </button>
           <button
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors"
+            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
             aria-label="Share on Reddit"
           >
             <FaRedditAlien size={18} />

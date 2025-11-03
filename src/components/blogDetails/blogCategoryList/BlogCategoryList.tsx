@@ -21,8 +21,8 @@
 //           onClick={() => onCategoryClick(category.name)}
 //           className={`w-full text-left px-3 py-2 text-sm rounded transition-colors ${
 //             selectedCategory === category.name
-//               ? "bg-orange-50 text-orange-600 font-medium"
-//               : "text-gray-600 hover:text-orange-600 hover:bg-gray-50"
+//               ? "bg-orange-50 text-primary font-medium"
+//               : "text-gray-600 hover:text-primary hover:bg-gray-50"
 //           }`}
 //         >
 //           {category.name}
@@ -49,7 +49,7 @@ export const BlogCategoryList: React.FC<BlogCategoryListProps> = ({
   variant = "default",
 }) => {
   const baseButtonClasses =
-    "w-full text-left transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2";
+    "w-full text-left transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2";
 
   const variantClasses = {
     default: " text-sm rounded-lg ",
@@ -58,8 +58,8 @@ export const BlogCategoryList: React.FC<BlogCategoryListProps> = ({
 
   const stateClasses = (isCurrent: boolean) =>
     isCurrent
-      ? "bg-orange-50 text-orange-700  font-semibold shadow-sm"
-      : "text-gray-700 hover:text-orange-600 ";
+      ? "bg-orange-50 text-primary  font-semibold shadow-sm"
+      : "text-gray-700 hover:text-primary ";
 
   return (
     <nav
@@ -85,7 +85,7 @@ export const BlogCategoryList: React.FC<BlogCategoryListProps> = ({
                     {isCurrent && (
                       <ChevronRight
                         size={16}
-                        className="text-orange-500 Shrink-0"
+                        className="text-primary Shrink-0"
                         aria-hidden="true"
                       />
                     )}
@@ -95,7 +95,7 @@ export const BlogCategoryList: React.FC<BlogCategoryListProps> = ({
                     <span
                       className={`px-2 py-1 text-xs rounded-full min-w-8 text-center Shrink-0 ${
                         isCurrent
-                          ? "bg-orange-100 text-orange-700"
+                          ? "bg-orange-100 text-primary"
                           : "bg-gray-100 text-gray-600"
                       }`}
                     >
@@ -149,7 +149,7 @@ export const BlogCategoryList: React.FC<BlogCategoryListProps> = ({
 //   };
 
 //   const baseButtonClasses =
-//     "w-full text-left transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2";
+//     "w-full text-left transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2";
 
 //   const variantClasses = {
 //     default: " text-sm rounded-lg border",
@@ -158,8 +158,8 @@ export const BlogCategoryList: React.FC<BlogCategoryListProps> = ({
 
 //   const stateClasses = (isSelected: boolean) =>
 //     isSelected
-//       ? "bg-orange-50 text-orange-700 border-orange-200 font-semibold shadow-sm"
-//       : "text-gray-700 hover:text-orange-600 hover:bg-orange-25 hover:border-orange-100 border-transparent";
+//       ? "bg-orange-50 text-primary border-orange-200 font-semibold shadow-sm"
+//       : "text-gray-700 hover:text-primary hover:bg-orange-25 hover:border-orange-100 border-transparent";
 
 //   return (
 //     <nav aria-label="Blog categories">
@@ -186,7 +186,7 @@ export const BlogCategoryList: React.FC<BlogCategoryListProps> = ({
 //                     {isSelected && (
 //                       <ChevronRight
 //                         size={16}
-//                         className="text-orange-500 Shrink-0"
+//                         className="text-primary Shrink-0"
 //                         aria-hidden="true"
 //                       />
 //                     )}
@@ -196,7 +196,7 @@ export const BlogCategoryList: React.FC<BlogCategoryListProps> = ({
 //                     <span
 //                       className={`px-2 py-1 text-xs rounded-full min-w-8 text-center Shrink-0 ${
 //                         isSelected
-//                           ? "bg-orange-100 text-orange-700"
+//                           ? "bg-orange-100 text-primary"
 //                           : "bg-gray-100 text-gray-600"
 //                       }`}
 //                     >

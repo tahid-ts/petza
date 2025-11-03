@@ -234,7 +234,7 @@ export default function BestsellerSection() {
       <Container>
         {/* === Section Header === */}
         <header className="flex items-center  justify-between mb-6">
-          <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-gray-900">
+          <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-gray-900 font-title">
             Our Bestseller Collection
           </h1>
           <Button

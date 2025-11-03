@@ -17,7 +17,7 @@ export const BlogNutritionalHighlights: React.FC<
       <div className="space-y-3">
         {items.map((item, idx) => (
           <div key={idx} className="flex items-start">
-            <span className="text-orange-500  mr-2 font-bold">-</span>
+            <span className="text-primary  mr-2 font-bold">-</span>
             <span className="text-gray-700">
               <span className="font-semibold">{item.title}</span> —{" "}
               {item.description}

@@ -11,7 +11,7 @@
 //     <div className="relative mb-4">
 //       <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
 //         <div
-//           className="h-full bg-orange-500 rounded-full transition-all duration-500"
+//           className="h-full bg-primary rounded-full transition-all duration-500"
 //           style={{ width: `${progressPercentage}%` }}
 //         />
 //       </div>

@@ -25,7 +25,7 @@ const RatingStars: React.FC<{ rating?: number }> = React.memo(
   ({ rating = 5 }) => {
     const stars = useMemo(() => Array.from({ length: rating }), [rating]);
     return (
-      <div className="flex justify-center mt-1 text-orange-400">
+      <div className="flex justify-center mt-1 text-primary">
         {stars.map((_, i) => (
           <span key={i} className="text-xs">
             ★
@@ -123,7 +123,7 @@ const TestimonialSwiper: React.FC<TestimonialSwiperProps> = ({
                   >
                     <div className="flex lg:flex-row flex-col items-center  lg:w-[25%] gap-4">
                       <div
-                        className={`relative rounded-full transition-all duration-500 bg-yellow-300 ${
+                        className={`relative rounded-full transition-all duration-500 bg-primary ${
                           isActive
                             ? " w-[100px] h-[100px] "
                             : " lg:w-16 lg:h-16 w-[100px] h-[100px]"

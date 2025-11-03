@@ -45,7 +45,7 @@ const products = [
 ];
 const TrendingProductsSection = () => {
   return (
-    <div className="md:h-[741px] h-full bg-[#FFF8F1] relative overflow-hidden">
+    <div className="md:h-[741px] h-full bg-bg-color-one relative overflow-hidden">
       <Container>
         <div className="grid lg:grid-cols-2 grid-cols-1 place-items-center place-content-center py-20 gap-5">
           {/* Left Card */}

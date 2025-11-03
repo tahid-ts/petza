@@ -1,34 +1,3 @@
-// // app/blog/page.tsx
-// import { BlogDetails } from "@/components/blogDetails/BlogDetails";
-// import { getBlogData } from "@/lib/blogApi";
-
-// interface BlogPageProps {
-//   searchParams: {
-//     category?: string;
-//     topic?: string;
-//   };
-// }
-
-// export default async function BlogPage({ searchParams }: BlogPageProps) {
-//   const blogData = await getBlogData();
-//   const { category, topic } = searchParams;
-
-//   // Filter posts based on search params
-//   const filteredPosts = blogData.posts.filter(post => {
-//     const matchesCategory = !category || post.category === category;
-//     const matchesTopic = !topic || post.topics.includes(topic);
-//     return matchesCategory && matchesTopic;
-//   });
-
-//   return (
-//     <BlogDetails
-//       blogData={{ ...blogData, posts: filteredPosts }}
-//       currentCategory={category}
-//       currentTopic={topic}
-//     />
-//   );
-// }
-// app/blog/[slug]/page.tsx
 import { BlogDetails } from "@/components/blogDetails/BlogDetails";
 import HomeLayout from "@/components/home/homeLayout/HomeLayout";
 import { getBlogData, getPostBySlug } from "@/lib/blogApi";
@@ -52,7 +21,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 
   return {
     title: `${post.title} | Health Blog`,
-    description: post.excerpt, // Use excerpt instead of content for better SEO
+    description: post.excerpt,
   };
 }
 

@@ -334,7 +334,7 @@ const HeroBanner = () => {
                     alt="hero banner"
                     width={144}
                     height={144}
-                    className="w-36 h-36  "
+                    className="w-36 h-36  animate-spin [animation-duration:10s]"
                   />
                   <Image
                     src="/img/intro/intro-thumb-shape1_1.png"

@@ -11,7 +11,7 @@ import BlogSection from "./blogCardSection/BlogSection";
 import TestimonialsSection from "./testimonialsSection/TestimonialsSection";
 const HomePage = () => {
   return (
-    <div>
+    <div className="font-title">
       <HeroSection />
       <CategoriesSection />
       <TrendingProductsSection />

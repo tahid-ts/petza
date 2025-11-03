@@ -212,7 +212,7 @@ const ShopSection: React.FC = () => {
                 menuItems={items}
                 labelClass="px-4 py-2 rounded-md font-medium text-gray-700 border border-primary hover:bg-gray-50 cursor-pointer h-full"
                 position="bottom-left"
-                itemClassName="py-1!"
+                itemClassName="py-1! cursor-pointer hover:bg-primary hover:text-white font-title"
                 menuContainerClass="mt-1 p-2!"
                 contentClass="pb-0! px-0!"
                 showTriggerIcon={false}
@@ -227,8 +227,8 @@ const ShopSection: React.FC = () => {
                 menuItems={items}
                 labelClass="px-4 py-2 rounded-md font-medium text-gray-700 border border-primary hover:bg-gray-50 cursor-pointer h-full"
                 position="bottom-right"
-                itemClassName="py-1!"
-                menuContainerClass="mt-1 p-2! shadow-md"
+                itemClassName="py-1! cursor-pointer hover:bg-primary hover:text-white font-title"
+                menuContainerClass="mt-1 p-2! "
                 contentClass="pb-0! px-0!"
                 triggerIconClass="group-hover:text-primary font-bold"
               />

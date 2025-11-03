@@ -228,8 +228,8 @@ const Button: React.FC<ButtonProps> = ({
       "hover:before:w-full z-[1] before:-z-10"
     ),
     tertiary: clsx(
-      "bg-light border-[3px] border-primary w-full cursor-pointer",
-      "before:absolute before:inset-0 before:w-0 before:bg-primary before:transition-all before:duration-300 before:rounded",
+      "bg-light rounded border-[3px] border-primary w-full cursor-pointer",
+      "before:absolute before:border-primary before:inset-0 before:w-0 before:bg-primary before:transition-all before:duration-300 before:rounded",
       "hover:before:w-full z-[1] before:-z-10"
     ),
     "primary-outline": clsx(

@@ -98,7 +98,7 @@ const CheckoutDataSection = () => {
             {/* Coupon Discount */}
             <div className="md:w-1/2 w-3/4  flex justify-between items-center">
               <span className="text-lg text-gray-700">Coupon Discount</span>
-              <button className="text-lg text-orange-500 hover:text-orange-600 font-normal">
+              <button className="text-lg text-primary hover:text-primary font-normal">
                 Apply Coupon
               </button>
             </div>

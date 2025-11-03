@@ -43,7 +43,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <div className="flex flex-col justify-between h-[246px] px-4 mb-4 ">
         <div className="flex items-center justify-between text-xs text-gray-500 gap-5">
           <span className="font-light">{date}</span>
-          <div className="flex items-center gap-1.5 bg-[#FF6B3D] text-white px-2.5 py-1 rounded">
+          <div className="flex items-center gap-1.5 bg-primary text-white px-2.5 py-1 rounded">
             <MessageSquare size={14} fill="white" />
             <span className="font-medium">{comments}</span>
           </div>

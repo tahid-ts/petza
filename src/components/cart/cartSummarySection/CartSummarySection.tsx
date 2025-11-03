@@ -49,7 +49,7 @@ export const CartSummarySectioon = memo(function CartSummarySectioon({
             // className={`${
             //   !hasItems
             //     ? "bg-gray-300 cursor-not-allowed text-gray-700"
-            //     : "bg-orange-500 hover:bg-orange-600 text-white"
+            //     : "bg-primary hover:bg-primary text-white"
             // } font-bold px-8 py-3.5 rounded-lg transition-colors shadow-md w-full sm:w-auto`}
           >
             Proceed To Checkout • {formatCurrency(total)}

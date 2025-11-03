@@ -31,7 +31,7 @@
 //         value={searchQuery}
 //         onChange={(e) => setSearchQuery(e.target.value)}
 //         onKeyDown={handleKeyDown}
-//         className="w-full px-4 py-2.5 pr-11 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 placeholder-gray-400"
+//         className="w-full px-4 py-2.5 pr-11 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary placeholder-gray-400"
 //       />
 //       <button
 //         onClick={handleSearch}
@@ -110,12 +110,12 @@
 //         value={searchQuery}
 //         onChange={handleChange}
 //         onKeyDown={handleKeyDown}
-//         className="w-full px-4 py-2.5 pr-11 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 placeholder-gray-400 transition-all duration-200"
+//         className="w-full px-4 py-2.5 pr-11 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary placeholder-gray-400 transition-all duration-200"
 //         aria-label="Search input"
 //       />
 //       <button
 //         onClick={() => handleSearch(searchQuery)}
-//         className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-orange-500 transition-colors"
+//         className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition-colors"
 //         aria-label="Search"
 //       >
 //         <Search size={18} />
@@ -155,7 +155,7 @@ export function SearchBox() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyDown}
-        className="w-full px-4 py-2.5 pr-11 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 placeholder-gray-400 bg-input"
+        className="w-full px-4 py-2.5 pr-11 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary placeholder-gray-400 bg-input"
       />
       <button
         onClick={handleSearch}

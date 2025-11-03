@@ -74,7 +74,7 @@ const NavbarSlider: React.FC = () => {
               aria-label="Previous"
               className="absolute 2xl:left-0 lg:left-0 top-1/2 -translate-y-1/2 w-8 h-8 z-20 lg:block hidden"
             >
-              <MoveLeft />
+              <MoveLeft className="text-white" />
             </button>
           </div>
           <div>
@@ -83,7 +83,7 @@ const NavbarSlider: React.FC = () => {
               aria-label="Next"
               className="absolute 2xl:right-0 lg:right-0 top-1/2 -translate-y-1/2 w-8 h-8 z-20 lg:block hidden"
             >
-              <MoveRight />
+              <MoveRight className="text-white" />
             </button>
           </div>
         </div>
