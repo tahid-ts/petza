@@ -17,7 +17,7 @@ const NewsletterSection = () => {
 
       {/* Main content with background image */}
       <div
-        className="bg-center bg-no-repeat bg-cover relative"
+        className="bg-center bg-no-repeat bg-cover relative py-20 md:py-0"
         style={{
           backgroundImage: "url(/img/testimonial/testimonial-bg1_1.png)",
         }}

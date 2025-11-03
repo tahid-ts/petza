@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
-
 import Container from "@/components/shared/container/Container";
 import { UserType } from "@/types/user";
 import Dropdown, { DropdownItem } from "../../ui/dropdown/Dropdown";
 import Button from "../../ui/button/Button";
-import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { MdOutlineSearch } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
+import ShoppingCart from "@/components/ui/dropdown/ShoppingCart";
 
 type NavItem = {
   href?: string;
@@ -179,11 +179,8 @@ const Navbar: React.FC<NavbarProps> = ({ userType = "guest", navItems }) => {
             className="rounded-full px-2 "
             icon={<FaUser size={20} />}
           />
-          <Button
-            variant="iconOnly"
-            className="rounded-full px-2"
-            icon={<FaShoppingCart size={20} />}
-          />
+
+          <ShoppingCart />
         </div>
       </Container>
     </header>

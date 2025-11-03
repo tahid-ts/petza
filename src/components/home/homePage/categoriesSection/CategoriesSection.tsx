@@ -124,13 +124,14 @@ const CategoriesSection: React.FC = () => {
         <div className="flex flex-col">
           {/* Top Row - 4 items */}
           <div className="flex md:flex-row flex-col justify-between mb-6">
-            <div className="animate-smooth-fade-up">
+            <div className="animate-smooth-fade-up flex flex-col md:items-start items-center md:p-0 p-5">
               <Title
                 align="left"
-                className="font-bold font-title mb-8 leading-[52.8px]"
+                size="4xl"
+                className="font-bold text-center md:text-start font-title mb-8 leading-[52.8px]  md:whitespace-normal whitespace-nowrap"
               >
                 Explore Our Best
-                <br />
+                <br className="hidden md:block" /> <span> </span>
                 Categories
               </Title>
               <Button
