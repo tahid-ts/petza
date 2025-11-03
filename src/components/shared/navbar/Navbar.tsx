@@ -175,6 +175,7 @@ const Navbar: React.FC<NavbarProps> = ({ userType = "guest", navItems }) => {
             </div>
           </div>
           <Button
+            href="/sign-in"
             variant="iconOnly"
             className="rounded-full px-2 "
             icon={<FaUser size={20} />}
