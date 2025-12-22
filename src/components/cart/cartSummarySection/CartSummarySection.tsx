@@ -45,12 +45,7 @@ export const CartSummarySectioon = memo(function CartSummarySectioon({
           <Button
             onClick={handleCheckout}
             disabled={!hasItems}
-            className="w-full"
-            // className={`${
-            //   !hasItems
-            //     ? "bg-gray-300 cursor-not-allowed text-gray-700"
-            //     : "bg-primary hover:bg-primary text-white"
-            // } font-bold px-8 py-3.5 rounded-lg transition-colors shadow-md w-full sm:w-auto`}
+            href="/checkout"
           >
             Proceed To Checkout • {formatCurrency(total)}
           </Button>

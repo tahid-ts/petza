@@ -3,6 +3,7 @@
 import React from "react";
 import Container from "../container/Container";
 import Title from "@/components/ui/title/Title";
+import Link from "next/link";
 
 const FooterCopyright = () => {
   return (
@@ -13,8 +14,10 @@ const FooterCopyright = () => {
           className="text-center text-gray-700 text-sm py-4 font-medium"
         >
           © {new Date().getFullYear()} by{" "}
-          <span className="text-primary">Trilogysoft</span>. All rights
-          reserved.
+          <Link href={"/home"} className="text-primary">
+            Trilogysoft
+          </Link>
+          . All rights reserved.
         </Title>
       </Container>
     </div>

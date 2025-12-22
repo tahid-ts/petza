@@ -66,32 +66,14 @@ export async function Blog({
   recentPosts = [],
   topics = [],
 }: BlogProps) {
-  //   const articleSlug = article.title
-  //     ? encodeURIComponent(
-  //         article.title
-  //           .toLowerCase()
-  //           .replace(/\s+/g, "-")
-  //           .replace(/[^a-z0-9-]/g, "")
-  //       )
-  //     : "";
-
   return (
     <div className="min-h-screen bg-bg-color-one">
-      {/* Back to Blog Button */}
-      {/* <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-md shadow-sm hover:bg-gray-50 transition-colors text-gray-700 font-medium"
-        >
-          ← Back to Blog
-        </Link>
-      </div> */}
-
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10">
         <Container>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
             {/* Main Content */}
-            <div className="w-full grid md:grid-cols-3 grid-cols-1 md:w-full gap-6 md:order-1 order-2">
+            {/* md:order-1 order-2 */}
+            <div className="w-full 2xl:grid-cols-3 xl:grid-cols-2 grid md:grid-cols-2 grid-cols-1 md:w-full gap-6 ">
               {blogs.map((blog) => (
                 <BlogCard
                   key={blog.id}
@@ -101,13 +83,13 @@ export async function Blog({
                   comments={blog.comments}
                   title={blog.title}
                   description={blog.description}
-                  //   onReadMore={() => handleReadMore(blog.id)}
                 />
               ))}
             </div>
 
             {/* Sidebar */}
-            <div className="w-full lg:w-[356px] md:order-2 order-1 ">
+            {/* md:order-2 order-1 */}
+            <div className="w-full lg:w-[356px]  ">
               <BlogSidebarSection>
                 <SearchBox />
               </BlogSidebarSection>

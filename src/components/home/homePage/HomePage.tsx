@@ -1,14 +1,14 @@
 import React from "react";
 
 import HeroSection from "./heroSection/HeroSection";
-import CategoriesSection from "./categoriesSection/CategoriesSection";
-import TrendingProductsSection from "./trendingProductsSection/TrendingProductsSection";
-import BestsellerSection from "./bestsellerSection/BestsellerSection";
-import ExclusiveOffersSection from "./exclusiveOffersSection/ExclusiveOffersSection";
+import CategoriesSection from "@/components/shared/sections/categoriesSection/CategoriesSection";
+import TrendingProductsSection from "@/components/shared/sections/trendingProductsSection/TrendingProductsSection";
+import BestsellerSection from "@/components/shared/sections/bestsellerSection/BestsellerSection";
+import ExclusiveOffersSection from "@/components/shared/sections/exclusiveOffersSection/ExclusiveOffersSection";
+import TestimonialsSection from "@/components/shared/sections/testimonialsSection/TestimonialsSection";
+import NewsletterSection from "@/components/shared/sections/newsletterSection/NewsletterSection";
+import BlogSection from "@/components/shared/sections/blogCardSection/BlogSection";
 
-import NewsletterSection from "./newsletterSection/NewsletterSection";
-import BlogSection from "./blogCardSection/BlogSection";
-import TestimonialsSection from "./testimonialsSection/TestimonialsSection";
 const HomePage = () => {
   return (
     <div className="font-title">

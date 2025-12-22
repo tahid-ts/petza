@@ -55,7 +55,7 @@ const CheckoutFormSection: React.FC = () => {
         onSubmit={handleSubmit}
       >
         <div className="flex gap-1 relative w-full">
-          <div className="flex flex-col items-center justify-between gap-4 relative h-[910px] md:h-[640px] lg:h-[670px]">
+          <div className="md:flex flex-col items-center justify-between gap-4 relative h-[910px] md:h-[640px] lg:h-[670px] hidden">
             <div className="p-2 rounded-full bg-primary text-white z-10">
               <FaLocationDot />
             </div>
@@ -69,9 +69,9 @@ const CheckoutFormSection: React.FC = () => {
             <div className="flex  flex-col md:flex-row md:justify-between">
               <Title
                 align="left"
-                className="  leading-8 lg:text-[48px] md:text-3xl text-2xl font-bold font-title"
+                className="  lg:text-[48px] md:text-3xl text-2xl font-bold font-title text-start"
               >
-                Checkout Form
+                Delivery Address
               </Title>
               <p className=" text-textColor mb-7">Select Save Address</p>
             </div>

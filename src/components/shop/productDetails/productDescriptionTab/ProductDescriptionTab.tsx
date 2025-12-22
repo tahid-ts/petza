@@ -8,9 +8,14 @@ import { PawPrint } from "lucide-react";
 const featureList = [
   "Water-Repellant Fabric",
   "Adjustable Drawstrings",
-  "Breathable Mesh Lining",
-  "Functional Flap Pockets",
-  "Snap Closures Under Belly",
+  "Snap Closure Under Belly",
+  "Removable Hood",
+  "Mesh Lining",
+  "Adjustable Drawstrings",
+  "Two Small Pockets",
+  "Gunmetal Hardware",
+  "Leash Hole at Back",
+  "Machine Washable",
 ];
 
 const descriptionParagraphs = [
@@ -34,10 +39,11 @@ const ProductDescriptionTab = () => {
         <TabbedView
           variant="card"
           tabPosition="center"
+          tabPanelClass="text-gray-400"
           tabs={[
             {
               id: 1,
-              title: "Description",
+              title: "Product Description",
               component: (
                 <div className="space-y-6">
                   {descriptionParagraphs.map((text, idx) => (
@@ -46,7 +52,7 @@ const ProductDescriptionTab = () => {
                       className="flex gap-2 text-dark font-title leading-relaxed"
                     >
                       <PawPrint className="h-5 w-5 text-gray-400 fill-gray-400 shrink-0" />
-                      <p>{text}</p>
+                      <p className="text-gray-600">{text}</p>
                     </div>
                   ))}
                 </div>
@@ -54,7 +60,7 @@ const ProductDescriptionTab = () => {
             },
             {
               id: 2,
-              title: "Reviews",
+              title: "Features",
               component: (
                 <div className="grid md:grid-cols-5 grid-cols-2 gap-6">
                   {Array.from({ length: 5 }).map((_, colIdx) => (
@@ -65,7 +71,7 @@ const ProductDescriptionTab = () => {
                           className="flex gap-2 text-dark font-title"
                         >
                           <PawPrint className="h-5 w-5 text-gray-400 fill-gray-400 shrink-0" />
-                          <p>{feature}</p>
+                          <p className="text-gray-600">{feature}</p>
                         </li>
                       ))}
                     </ul>

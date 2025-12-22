@@ -1,36 +1,3 @@
-// "use client";
-// import { Category } from "@/types/blog";
-// import React from "react";
-
-// interface BlogCategoryListProps {
-//   categories: Category[];
-//   selectedCategory: string | null;
-//   onCategoryClick: (category: string) => void;
-// }
-
-// export const BlogCategoryList: React.FC<BlogCategoryListProps> = ({
-//   categories,
-//   selectedCategory,
-//   onCategoryClick,
-// }) => {
-//   return (
-//     <div className="space-y-1">
-//       {categories.map((category) => (
-//         <button
-//           key={category.name}
-//           onClick={() => onCategoryClick(category.name)}
-//           className={`w-full text-left px-3 py-2 text-sm rounded transition-colors ${
-//             selectedCategory === category.name
-//               ? "bg-orange-50 text-primary font-medium"
-//               : "text-gray-600 hover:text-primary hover:bg-gray-50"
-//           }`}
-//         >
-//           {category.name}
-//         </button>
-//       ))}
-//     </div>
-//   );
-// };
 import { Category } from "@/types/blog";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";

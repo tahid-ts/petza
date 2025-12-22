@@ -53,10 +53,16 @@ const CheckoutDataSection = () => {
 
               {/* Product Details */}
               <div>
-                <Title align="left" className="md:text-xl text-sm font-bold">
+                <Title
+                  align="left"
+                  className="md:text-xl text-sm font-bold text-start"
+                >
                   {item.name}
                 </Title>
-                <Title align="left" className="md:text-xl text-sm font-bold">
+                <Title
+                  align="left"
+                  className="md:text-xl text-sm font-bold text-start"
+                >
                   <span className="font-semibold md:text-xl text-sm">
                     Quantity :
                   </span>{" "}
@@ -93,14 +99,6 @@ const CheckoutDataSection = () => {
             <div className="md:w-1/2 w-3/4  flex justify-between items-center">
               <span className="text-lg text-gray-700">Discount On MRP</span>
               <span className="text-lg text-gray-800">{discountOnMRP}</span>
-            </div>
-
-            {/* Coupon Discount */}
-            <div className="md:w-1/2 w-3/4  flex justify-between items-center">
-              <span className="text-lg text-gray-700">Coupon Discount</span>
-              <button className="text-lg text-primary hover:text-primary font-normal">
-                Apply Coupon
-              </button>
             </div>
 
             {/* Delivery Charge */}

@@ -62,12 +62,12 @@ const Footer = () => {
               open={quickAccessOpen}
               setOpen={setQuickAccessOpen}
               links={[
-                { href: "/dogs-food", label: "Dog's food" },
-                { href: "/cats-food", label: "Cat's food" },
-                { href: "/birds-food", label: "Bird's food" },
-                { href: "/dogs-accessories", label: "Dog's accessories" },
-                { href: "/cats-accessories", label: "Cat's accessories" },
-                { href: "/birds-accessories", label: "Bird's accessories" },
+                { href: "/home", label: "Dog's food" },
+                { href: "/home", label: "Cat's food" },
+                { href: "/home", label: "Bird's food" },
+                { href: "/home", label: "Dog's accessories" },
+                { href: "/home", label: "Cat's accessories" },
+                { href: "/home", label: "Bird's accessories" },
               ]}
             />
 

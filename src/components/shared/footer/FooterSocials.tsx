@@ -6,10 +6,10 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const FooterSocials = () => {
   return (
-    <div className="flex justify-center -mt-5 mb-20 w-full px-4">
-      <div className="flex w-full max-w-md">
+    <div className="flex justify-center -mt-5 mb-20 w-full lg:px-4">
+      <div className="flex w-full md:max-w-md max-w-full">
         <Link
-          href="https://www.facebook.com/profile.php?id=100010808852858"
+          href="https://www.facebook.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white border-2 border-primary rounded-l-xl py-2 px-3 sm:px-5 hover:bg-gray-50 transition-colors flex items-center gap-2 text-gray-700 flex-1 justify-center sm:justify-start"

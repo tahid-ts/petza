@@ -248,6 +248,7 @@ const OrderList: React.FC = () => {
           <Button
             className="pr-2 w-[168px]"
             iconPosition="left"
+            href="/shop"
             icon={
               <svg
                 className="w-5 h-5"

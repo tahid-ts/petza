@@ -2,9 +2,10 @@ export type Product = {
   id: string | number;
   name: string;
   price: number;
+  rating?: number;
   image: string;
-//   offer?: boolean;
   offerName?: string;
+  category?: string;
   offerPrice?: number;
   decoration?: string;
 };

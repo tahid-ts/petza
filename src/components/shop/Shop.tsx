@@ -1,16 +1,15 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import Container from "@/components/shared/container/Container";
 import ProductCard from "@/components/shared/card/ProductCard";
 import Dropdown from "../ui/dropdown/Dropdown";
 import { Settings2 } from "lucide-react";
 import TabbedView from "../ui/tabs/TabbedView";
 import Pagination from "../ui/pagination/Pagination";
+import { Product } from "@/types/product";
 
-const products = [
+const products: Product[] = [
   {
     id: 1,
     name: "Green & Yellow Parakeet",
@@ -19,6 +18,7 @@ const products = [
     category: "Birds",
     offerName: "Summer Sale",
     offerPrice: 250,
+    rating: 4.4,
   },
   {
     id: 2,
@@ -28,6 +28,7 @@ const products = [
     category: "Accessories",
     offerName: "Best Seller",
     offerPrice: 250,
+    rating: 1.4,
   },
   {
     id: 3,
@@ -37,6 +38,7 @@ const products = [
     category: "Dog",
     offerName: "New",
     offerPrice: 250,
+    rating: 3.2,
   },
   {
     id: 4,
@@ -46,6 +48,7 @@ const products = [
     category: "Cat",
     offerName: "Summer Sale",
     offerPrice: 250,
+    rating: 4,
   },
   {
     id: 5,
@@ -53,6 +56,7 @@ const products = [
     price: 290,
     image: "/img/product/product1_5.png",
     category: "Foods",
+    rating: 3,
   },
   {
     id: 6,
@@ -69,6 +73,7 @@ const products = [
     price: 290,
     image: "/img/product/product1_6.png",
     category: "Accessories",
+    rating: 4,
   },
   {
     id: 8,
@@ -78,6 +83,7 @@ const products = [
     category: "Foods",
     offerName: "Summer Sale",
     offerPrice: 250,
+    rating: 3.4,
   },
   {
     id: 9,
@@ -103,6 +109,7 @@ const products = [
     category: "Cat",
     offerName: "Best Seller",
     offerPrice: 120,
+    rating: 2.4,
   },
   {
     id: 12,
@@ -110,91 +117,144 @@ const products = [
     price: 180,
     image: "/img/product/product1_4.png",
     category: "Dog",
+    rating: 4.1,
   },
 ];
 
-const items = [
-  { label: "Shop Grid", href: "/shop-grid" },
-  { label: "Shop List", href: "/shop-list" },
-  { label: "Shop Single", href: "/shop-single" },
+const sortOptions = [
+  { label: "Default", value: "default" },
+  { label: "Price: Low to High", value: "price-asc" },
+  { label: "Price: High to Low", value: "price-desc" },
+  { label: "Name: A → Z", value: "name-asc" },
+  { label: "Name: Z → A", value: "name-desc" },
+];
+
+const ratingsItems = [
+  { label: "Highest First", value: "rating-desc" },
+  { label: "Lowest First", value: "rating-asc" },
+  { label: "Most Reviewed", value: "reviews-desc" },
+];
+
+const categories = [
+  { label: "All", value: "All" },
+  { label: "Dog", value: "Dog" },
+  { label: "Accessories", value: "Accessories" },
+  { label: "Foods", value: "Foods" },
+  { label: "Cat", value: "Cat" },
+  { label: "Birds", value: "Birds" },
 ];
 
 const ShopSection: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [sortBy, setSortBy] = useState("default");
+  const itemsPerPage = 8;
 
-  const categories = [
-    { label: "All", value: "All" },
-    { label: "Dog", value: "Dog" },
-    { label: "Accessories", value: "Accessories" },
-    { label: "Foods", value: "Foods" },
-    { label: "Cat", value: "Cat" },
-    { label: "Birds", value: "Birds" },
-  ];
+  const sortProducts = useCallback(
+    (list: typeof products) => {
+      const sorted = [...list];
 
-  const getPaginatedProducts = (categoryProducts: typeof products) => {
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    return categoryProducts.slice(startIndex, endIndex);
-  };
+      switch (sortBy) {
+        case "price-asc":
+          sorted.sort(
+            (a, b) => (a.offerPrice || a.price) - (b.offerPrice || b.price)
+          );
+          break;
 
-  const getTotalPages = (categoryProducts: typeof products) => {
-    return Math.ceil(categoryProducts.length / itemsPerPage);
-  };
+        case "price-desc":
+          sorted.sort(
+            (a, b) => (b.offerPrice || b.price) - (a.offerPrice || a.price)
+          );
+          break;
 
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+        case "name-asc":
+          sorted.sort((a, b) => a.name.localeCompare(b.name));
+          break;
 
-  const tabs = categories.map((category, index) => {
-    const categoryProducts =
-      category.value === "All"
-        ? products
-        : products.filter((p) => p.category === category.value);
+        case "name-desc":
+          sorted.sort((a, b) => b.name.localeCompare(a.name));
+          break;
 
-    const totalPages = getTotalPages(categoryProducts);
-    const paginatedProducts = getPaginatedProducts(categoryProducts);
+        case "rating-desc":
+          sorted.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+          break;
 
-    return {
-      id: index + 1,
-      title: category.label,
-      component: (
-        <div className="space-y-8">
-          {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {paginatedProducts.length > 0 ? (
-              paginatedProducts.map((product) => (
-                <ProductCard key={product.id} product={product} offer />
-              ))
-            ) : (
-              <div className="col-span-full text-center py-8">
-                <p className="text-gray-600 text-lg">
-                  No products found in this category.
-                </p>
-              </div>
+        case "rating-asc":
+          sorted.sort((a, b) => (a.rating || 0) - (b.rating || 0));
+          break;
+      }
+      return sorted;
+    },
+    [sortBy]
+  );
+
+  /* ---------------------------------------------------------
+    MEMOIZED PAGINATION FUNCTION
+  --------------------------------------------------------- */
+  const getPaginated = useCallback(
+    (list: typeof products) => {
+      const start = (currentPage - 1) * itemsPerPage;
+      return list.slice(start, start + itemsPerPage);
+    },
+    [currentPage, itemsPerPage]
+  );
+
+  /* ---------------------------------------------------------
+    BUILD TABS — fully memoized (NO warnings)
+  --------------------------------------------------------- */
+  const tabs = useMemo(() => {
+    return categories.map((category, index) => {
+      // Filter by category
+      let categoryProducts =
+        category.value === "All"
+          ? products
+          : products.filter((p) => p.category === category.value);
+
+      // Apply sorting
+      categoryProducts = sortProducts(categoryProducts);
+
+      // Pagination
+      const paginatedProducts = getPaginated(categoryProducts);
+      const totalPages = Math.ceil(categoryProducts.length / itemsPerPage);
+
+      return {
+        id: index + 1,
+        title: category.label,
+        component: (
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {paginatedProducts.length > 0 ? (
+                paginatedProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} offer />
+                ))
+              ) : (
+                <div className="col-span-full text-center py-8 text-gray-600 text-lg">
+                  No products found.
+                </div>
+              )}
+            </div>
+
+            {totalPages > 1 && (
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={(page) => {
+                  setCurrentPage(page);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                itemsPerPage={itemsPerPage}
+                totalItems={categoryProducts.length}
+                showItemCount={true}
+              />
             )}
           </div>
+        ),
+      };
+    });
+  }, [currentPage, itemsPerPage, sortProducts, getPaginated]);
 
-          {/* Pagination */}
-          {paginatedProducts.length > 0 && totalPages > 1 && (
-            <Pagination
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={handlePageChange}
-              itemsPerPage={itemsPerPage}
-              totalItems={categoryProducts.length}
-              showItemCount={true}
-              className="mt-8"
-            />
-          )}
-        </div>
-      ),
-    };
-  });
-
-  // Reset to page 1 when tab changes
-
+  /* ---------------------------------------------------------
+    RENDER
+  --------------------------------------------------------- */
   return (
     <section className="bg-bg-color-one py-20">
       <Container>
@@ -203,28 +263,38 @@ const ShopSection: React.FC = () => {
           showId={false}
           rightElement={
             <div className="flex md:gap-6 gap-4">
+              {/* Rating Filter */}
               <Dropdown
                 label={
-                  <span className="flex gap-2 group-hover:text-primary md:text-base text-sm">
-                    Filter <Settings2 />{" "}
+                  <span className="flex gap-2 md:text-base text-sm">
+                    Rating <Settings2 />
                   </span>
                 }
-                menuItems={items}
+                menuItems={ratingsItems.map((option) => ({
+                  label: option.label,
+                  onClick: () => {
+                    setSortBy(option.value);
+                    setCurrentPage(1);
+                  },
+                }))}
                 labelClass="px-4 py-2 rounded-md font-medium text-gray-700 border border-primary hover:bg-gray-50 cursor-pointer h-full"
-                position="bottom-left"
+                position="bottom-center"
                 itemClassName="py-1! cursor-pointer hover:bg-primary hover:text-white font-title"
-                menuContainerClass="mt-1 p-2!"
+                menuContainerClass="mt-1 p-2! "
                 contentClass="pb-0! px-0!"
-                showTriggerIcon={false}
                 triggerIconClass="group-hover:text-primary font-bold"
               />
+
+              {/* Sort Dropdown */}
               <Dropdown
-                label={
-                  <span className="flex gap-2 group-hover:text-primary md:text-base text-sm">
-                    Sort by
-                  </span>
-                }
-                menuItems={items}
+                label={<span className="md:text-base text-sm">Sort by</span>}
+                menuItems={sortOptions.map((option) => ({
+                  label: option.label,
+                  onClick: () => {
+                    setSortBy(option.value);
+                    setCurrentPage(1);
+                  },
+                }))}
                 labelClass="px-4 py-2 rounded-md font-medium text-gray-700 border border-primary hover:bg-gray-50 cursor-pointer h-full"
                 position="bottom-right"
                 itemClassName="py-1! cursor-pointer hover:bg-primary hover:text-white font-title"
@@ -235,7 +305,6 @@ const ShopSection: React.FC = () => {
             </div>
           }
           tabs={tabs}
-          className="mb-8"
         />
       </Container>
     </section>

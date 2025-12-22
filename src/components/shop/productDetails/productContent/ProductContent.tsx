@@ -1,6 +1,8 @@
 import Button from "@/components/ui/button/Button";
 import Title from "@/components/ui/title/Title";
+import { useCart } from "@/store/store";
 import { Minus, Plus, ShoppingCart, Star } from "lucide-react";
+import Link from "next/link";
 import React, { useState } from "react";
 import {
   FaFacebookF,
@@ -14,7 +16,7 @@ const ProductContent = () => {
   const [selectedColor, setSelectedColor] = useState("orange");
   const [selectedSize, setSelectedSize] = useState("XS");
   const [quantity, setQuantity] = useState(1);
-
+  const { addItem } = useCart();
   const colors = [
     { name: "orange", value: "#fa6c41" },
     { name: "red", value: "#EF4444" },
@@ -98,7 +100,7 @@ const ProductContent = () => {
         <div className="flex items-center gap-3">
           <button
             onClick={decreaseQuantity}
-            className="w-10 h-10 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+            className="w-10 h-10 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer"
             aria-label="Decrease quantity"
           >
             <Minus size={16} />
@@ -111,7 +113,7 @@ const ProductContent = () => {
           />
           <button
             onClick={increaseQuantity}
-            className="w-10 h-10 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+            className="w-10 h-10 border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer"
             aria-label="Increase quantity"
           >
             <Plus size={16} />
@@ -124,6 +126,15 @@ const ProductContent = () => {
           iconPosition="left"
           className="w-full pr-2 h-full"
           icon={<PiHandbagSimple size={20} />}
+          onClick={() => {
+            addItem({
+              id: "BELT-001236",
+              name: "Dog Food Pedigree Pet Foods",
+              price: 260,
+              image: "/img/product/product1_1.png",
+            });
+            setQuantity(1);
+          }}
         >
           <span>Add To Cart</span>
         </Button>
@@ -135,7 +146,8 @@ const ProductContent = () => {
         iconPosition="left"
         variant="primary-two"
         size="none"
-        className="flex justify-center items-center gap-2 w-full h-14 whitespace-nowrap mb-6 pr-2"
+        className="flex justify-center items-center gap-2 w-full h-14 whitespace-nowrap mb-6 pr-2 cursor-pointer"
+        href="/cart"
         icon={<ShoppingCart size={20} />}
       >
         Buy Now
@@ -144,31 +156,53 @@ const ProductContent = () => {
       {/* Social Share */}
       <div>
         <p className="text-sm font-semibold mb-3">Share:</p>
+
         <div className="flex gap-3">
-          <button
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+          {/* WhatsApp */}
+          <Link
+            href={`https://wa.me/?text=${encodeURIComponent("))10110110011")}`}
+            target="_blank"
+            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
             aria-label="Share on WhatsApp"
           >
             <FaWhatsapp size={18} />
-          </button>
-          <button
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+          </Link>
+
+          {/* Facebook */}
+          <Link
+            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+              ""
+            )}`}
+            target="_blank"
+            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
             aria-label="Share on Facebook"
           >
             <FaFacebookF size={18} />
-          </button>
-          <button
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+          </Link>
+
+          {/* LinkedIn */}
+          <Link
+            href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+              ""
+            )}`}
+            target="_blank"
+            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
             aria-label="Share on LinkedIn"
           >
             <FaLinkedinIn size={18} />
-          </button>
-          <button
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+          </Link>
+
+          {/* Reddit */}
+          <Link
+            href={`https://www.reddit.com/submit?url=${encodeURIComponent(
+              ""
+            )}&title=${encodeURIComponent("")}`}
+            target="_blank"
+            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
             aria-label="Share on Reddit"
           >
             <FaRedditAlien size={18} />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

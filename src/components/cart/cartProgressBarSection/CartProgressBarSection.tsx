@@ -1,26 +1,5 @@
-// import { memo } from "react";
-
-// interface CartProgressBarSectionProps {
-//   progressPercentage: number;
-// }
-
-// export const CartProgressBarSection = memo(function CartProgressBarSection({
-//   progressPercentage,
-// }: CartProgressBarSectionProps) {
-//   return (
-//     <div className="relative mb-4">
-//       <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-//         <div
-//           className="h-full bg-primary rounded-full transition-all duration-500"
-//           style={{ width: `${progressPercentage}%` }}
-//         />
-//       </div>
-//     </div>
-//   );
-// });
-
 import { memo } from "react";
-import { Truck } from "lucide-react"; // Lucide icon import
+import { Truck } from "lucide-react";
 
 interface CartProgressBarSectionProps {
   progressPercentage: number;
@@ -31,7 +10,6 @@ export const CartProgressBarSection = memo(function CartProgressBarSection({
 }: CartProgressBarSectionProps) {
   return (
     <div className="relative mb-4">
-      {/* Progress Bar */}
       <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
         <div
           className="h-full bg-primary rounded-full transition-all duration-500"
@@ -39,7 +17,6 @@ export const CartProgressBarSection = memo(function CartProgressBarSection({
         />
       </div>
 
-      {/* Lucid Cart Icon (Positioned at the end of the progress bar) */}
       <div
         className="absolute top-1/2 transform -translate-y-1/2 right-0 -ml-5"
         style={{ left: `${progressPercentage}%` }}

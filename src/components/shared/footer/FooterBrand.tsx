@@ -15,7 +15,9 @@ const FooterBrand = () => {
           width={177}
           height={48}
           alt="Pet Shop Logo"
-          className="object-contain w-[177px] h-12"
+          priority
+          className="object-contain"
+          style={{ width: "177px", height: "48px" }}
         />
       </div>
       <p className="text-sm text-gray-600 mb-5 leading-4 max-w-[331px]">
@@ -24,6 +26,7 @@ const FooterBrand = () => {
       </p>
       <div className="space-y-5">
         <Button
+          href="tel:+13100000000"
           variant="primary-outline"
           icon={<IoCall className="w-4 h-4" />}
           className="w-[239px] flex justify-between h-12 pr-2 text-sm font-light"
@@ -32,6 +35,7 @@ const FooterBrand = () => {
           +1 (310) 000-0000
         </Button>
         <Button
+          href="mailto:info@demo.com"
           variant="primary-outline"
           icon={<Mail className="w-4 h-4" />}
           className="h-12 flex justify-between w-[203px] text-sm font-light pr-2"

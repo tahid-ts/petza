@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-
 "use client";
 import React, {
   useState,
@@ -91,8 +89,8 @@ const SUBMENU_POSITION_CLASSES: Record<string, string> = {
 };
 
 const DROPDOWN_CLASSES = {
-  menu: "absolute z-[99999] bg-white border border-gray-300 rounded-md min-w-[12rem]",
-  item: "w-full text-left px-4 py-2 text-sm flex justify-between items-center focus:bg-gray-100 focus:outline-none text-black",
+  menu: "absolute z-[99999] bg-white border border-gray-300 rounded-md min-w-[12rem] cursor-pointer",
+  item: "w-full text-left px-4 py-2 text-sm flex justify-between items-center focus:bg-gray-100 focus:outline-none text-black cursor-pointer",
   header:
     "px-4 pt-2 pb-1 text-sm font-semibold text-gray-700 border-b border-gray-200",
   content: "px-4 pb-2 text-sm text-gray-600",
@@ -196,7 +194,7 @@ const DropdownItemComponent = React.memo(
         window.removeEventListener("resize", throttledUpdate);
         throttledUpdate.cancel();
       };
-    }, [isOpen, throttledUpdate]);
+    }, [isOpen, throttledUpdate, updatePosition]);
 
     useEffect(() => {
       if (!isOpen) {
@@ -564,7 +562,7 @@ const Dropdown: React.FC<DropdownProps> = React.memo(
         window.removeEventListener("scroll", throttledCalculate);
         throttledCalculate.cancel();
       };
-    }, [open, throttledCalculate]);
+    }, [calculateMenuPosition, open, throttledCalculate]);
 
     useEffect(() => {
       if (!open) {
@@ -692,7 +690,10 @@ const Dropdown: React.FC<DropdownProps> = React.memo(
 
     return (
       <div
-        className={clsx("relative inline-block group", className)}
+        className={clsx(
+          "relative inline-block cursor-pointer group",
+          className
+        )}
         ref={dropdownRef}
         role="menu"
         aria-label={ariaLabel}

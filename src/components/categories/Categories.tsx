@@ -4,7 +4,7 @@ import React, { memo } from "react";
 import CategoryCard from "../shared/card/CategoryCard";
 import Container from "../shared/container/Container";
 import Decoration from "../ui/decoration/Decoration";
-import ScrollAnimator from "../shared/animation/scrollAnimation/ScrollAnimator";
+import ScrollAnimator from "../../utils/animation/scrollAnimation/ScrollAnimator";
 import type { ScrollEffectName } from "@/types/animation";
 
 // ✅ Predefined data (duplicated labels are fine now since we use unique keys)

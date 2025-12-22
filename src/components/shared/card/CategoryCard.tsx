@@ -3,7 +3,7 @@ import Button from "@/components/ui/button/Button";
 import Image from "next/image";
 import React from "react";
 import { IoArrowForward } from "react-icons/io5";
-import ScrollAnimator from "../animation/scrollAnimation/ScrollAnimator";
+import ScrollAnimator from "../../../utils/animation/scrollAnimation/ScrollAnimator";
 interface CategoryCardProps {
   image: string;
   label: string;
@@ -15,9 +15,9 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   onClick,
 }) => {
   return (
-    <div className="flex flex-col items-end animate-slide-up duration-700 ease-bounce offset-medium">
+    <div className="flex flex-col items-center animate-slide-up duration-700 ease-bounce offset-medium">
       <div
-        className="md:w-[213px] md:h-[213px] w-[175px] h-[175px] rounded-full border-[3px] border-primary flex items-center justify-center bg-white relative"
+        className="xl:w-40 xl:h-40 2xl:w-[213px] 2xl:h-[213px] md:w-40 md:h-40 w-[175px] h-[175px] rounded-full border-[3px] border-primary flex items-center justify-center bg-white relative"
         style={{
           backgroundImage: "url(/img/basic-needs/basic-needs-shape1_1.png)",
           backgroundPosition: "center",
@@ -32,7 +32,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
               alt="category image"
               width={144}
               height={144}
-              className="inline-block md:h-36 md:w-36 w-[98px] h-[98px]"
+              className="inline-block xl:w-40 xl:h-40 lg:h-36 lg:w-28 md:h-28 md:w-32 w-[98px] h-[98px]"
             />
           </ScrollAnimator>
         </div>
@@ -41,9 +41,10 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
       <Button
         variant="tertiary"
         iconPosition="left"
-        className="md:w-[213px] w-[175px] h-[50px] transition-colors -mt-12  z-20  pr-2"
+        className="2xl:w-[213px] xl:w-[180px] lg:w-[213px] md:w-[180px] w-[175px] h-[50px]  -mt-12  z-20  pr-2"
         icon={<IoArrowForward size={16} />}
         onClick={onClick}
+        href="/shop"
         iconClassName=""
       >
         {label}
