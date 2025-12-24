@@ -32,7 +32,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
               alt="category image"
               width={144}
               height={144}
-              className="inline-block xl:w-40 xl:h-40 lg:h-36 lg:w-28 md:h-28 md:w-32 w-[98px] h-[98px]"
+              className="inline-block xl:w-full 2xl:h-36 lg:h-32 lg:w-28 md:h-28 md:w-32 w-[98px] h-[98px]"
             />
           </ScrollAnimator>
         </div>

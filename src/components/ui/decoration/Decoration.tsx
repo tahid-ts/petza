@@ -156,15 +156,6 @@ const Decoration: React.FC<DecorationProps> = ({
       className={`${baseClasses} ${resolvedResponsive} ${resolvedPosition} ${transform} ${resolvedOpacity} ${style} ${className}`}
     >
       {src ? (
-        // <Image
-        //   src={src}
-        //   alt={alt}
-        //   width={width}
-        //   height={height}
-        //   priority
-        //   className="w-full max-w-[200px] sm:max-w-[300px] lg:max-w-none h-auto object-contain pointer-events-none"
-        //   style={{ width: "100%", height: "100%" }}
-        // />
         <Image
           src={src}
           alt={alt}
@@ -182,37 +173,6 @@ const Decoration: React.FC<DecorationProps> = ({
       ) : (
         children
       )}
-      {/* {src ? (
-        <Image
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          priority
-          className="w-full h-auto max-w-[200px] sm:max-w-[300px] lg:max-w-none object-contain pointer-events-none"
-          sizes="(max-width: 640px) 200px, (max-width: 768px) 300px, 400px"
-          style={{
-            width: "full",
-            height: "auto",
-          }}
-        />
-      ) : (
-        children
-      )} */}
-      {/* {src ? (
-        <div className="relative w-full h-full">
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            priority
-            className="object-contain pointer-events-none"
-            sizes="(max-width: 640px) 200px, (max-width: 768px) 300px, 400px"
-          />
-        </div>
-      ) : (
-        children
-      )} */}
     </div>
   );
 };

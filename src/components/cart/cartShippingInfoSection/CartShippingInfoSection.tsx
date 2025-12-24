@@ -18,7 +18,7 @@ export const CartShippingInfoSection = memo(function CartShippingInfoSection({
   );
 
   return (
-    <section className="bg-bg-color-two rounded-2xl p-8 mb-12 shadow-sm">
+    <section className="bg-bg-color-two rounded-2xl p-8 lg:mb-20 mb-10 shadow-sm">
       <p className="text-center mb-6 text-sm">
         <span className="text-gray-700">Great! You've unlocked </span>
         <span className="text-primary font-semibold">FREE SHIPPING</span>

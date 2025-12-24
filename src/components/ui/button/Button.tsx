@@ -52,7 +52,7 @@ const Button: React.FC<ButtonProps> = ({
     none: "",
     xs: "px-3 py-2 text-xs h-8 w-8",
     sm: "px-4 py-2 text-sm h-10",
-    md: "px-6 py-3 text-base h-12",
+    md: "px-6 text-base h-12",
     lg: "px-8 py-4 text-lg h-14",
   };
 

@@ -90,7 +90,7 @@ const HeroSection = () => {
                   iconPosition="left"
                   variant="primary-two"
                   size="none"
-                  className="flex justify-between w-[171px] h-14 whitespace-nowrap pr-2 "
+                  className="flex justify-between w-[171px] h-12 whitespace-nowrap pr-2 "
                   icon={<PiHandbagSimple size={20} />}
                 >
                   Shop Now
@@ -118,34 +118,6 @@ const HeroSection = () => {
         h-[185px] w-[185px] mt-16
         flex items-center justify-center animate-smooth-slide-in"
                 >
-                  {/* <Image
-                    src={"/img/intro/intro-thumb1_1.png"}
-                    alt="hero banner"
-                    width={294}
-                    height={440}
-                    className="
-            2xl:w-[293.37px] 
-            xl:w-[250px] 
-            lg:w-[200px ] 
-            md:w-[220px] 
-            h-auto w-[150px]
-            object-contain
-            animate-smooth-scale-in"
-                  /> */}
-                  {/* <Image
-                    src={"/img/intro/intro-thumb1_1.png"}
-                    alt="hero banner"
-                    width={294}
-                    height={440}
-                    className="
- w-[150px] h-auto
-    md:w-[220px] md:h-auto
-    lg:w-[200px] lg:h-auto
-    xl:w-[250px] xl:h-auto
-    2xl:w-[293px] 2xl:h-auto
-    object-contain
-    animate-smooth-scale-in"
-                  /> */}
                   <img
                     src="/img/intro/intro-thumb1_1.png"
                     alt="hero banner"
@@ -180,19 +152,6 @@ const HeroSection = () => {
         flex items-center justify-center animate-smooth-fade-rotate"
                 >
                   <div>
-                    {/* <Image
-                      src={"/img/intro/intro-thumb1_2.png"}
-                      alt="hero banner"
-                      width={329}
-                      height={427}
-                      className="
-            2xl:w-[329.36px] 2xl:h-auto
-            xl:w-[280px] xl:h-auto
-            lg:w-60 lg:h-auto
-            md:w-[380px] md:h-auto
-            w-[149px] h-auto
-            object-contain"
-                    /> */}
                     <img
                       src="/img/intro/intro-thumb1_2.png"
                       alt="hero banner"
@@ -274,19 +233,6 @@ const HeroSection = () => {
               w-[150px] h-[150px]
           flex items-center justify-center order-2 md:order-1"
                   >
-                    {/* <Image
-                      src={"/img/intro/intro-thumb1_3.png"}
-                      alt="hero banner"
-                      width={215}
-                      height={214}
-                      className="
-              2xl:w-[215px] 2xl:h-auto
-              xl:w-[185px] xl:h-auto
-              lg:w-40 lg:h-auto
-              md:w-[180px] md:h-auto
-              w-[150px] h-auto
-              object-cover"
-                    /> */}
                     <img
                       src="/img/intro/intro-thumb1_3.png"
                       alt="hero banner"

@@ -36,7 +36,7 @@ const Categories: React.FC = () => {
   return (
     <section className="relative overflow-hidden">
       <Container className="pt-14 lg:mt-14 lg:mb-[104px] mb-20">
-        <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-6 justify-items-center">
+        <div className="grid lg:grid-cols-4 xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-6 justify-items-center">
           {categories.map(({ image, label }, index) => (
             <ScrollAnimator
               key={`${label}-${index}`}

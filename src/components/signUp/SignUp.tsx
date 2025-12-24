@@ -8,9 +8,9 @@ const SignUp = () => {
   return (
     <div className="min-h-screen  py-20">
       <Container>
-        <div className="grid md:grid-cols-2 grid-cols-1 h-[700px]">
-          <div className="bg-bg-color-one rounded-l-2xl flex items-center justify-center">
-            <div className="flex flex-col w-full px-16">
+        <div className="grid lg:grid-cols-2 grid-cols-1 h-[700px]">
+          <div className="bg-bg-color-one rounded-l-2xl ">
+            <div className="flex flex-col w-full px-8 lg:px-16">
               <SignUpHeader />
               <SingUpForm />
             </div>

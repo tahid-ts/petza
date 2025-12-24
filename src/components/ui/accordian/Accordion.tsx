@@ -28,7 +28,7 @@ export default function Accordion({ data }: AccordionProps) {
           <div key={idx} className="py-3 last-of-type:border-b-0">
             <button
               onClick={() => toggle(idx)}
-              className="flex w-full items-center justify-between md:font-semibold font-bold text-dark md:text-xl text-sm outline-none font-title"
+              className="flex w-full items-center justify-between md:font-semibold font-bold text-dark md:text-xl text-sm outline-none font-title cursor-pointer"
             >
               <span>
                 {" "}

@@ -473,7 +473,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         aria-hidden={!isMobileOpen}
       >
         <div className="h-full flex flex-col">
-          <div className="px-4 py-2 border-b border-gray-100">
+          <div className="px-4 py-4 border-b border-gray-100">
             {header || (
               <Link href="/" className="flex items-center lg:ml-0 ml-5">
                 <Image

@@ -43,14 +43,14 @@ export const CartItemSection = memo<CartItemProps>(function CartItemSection({
   return (
     <li className="grid grid-cols-12 gap-4 items-center border-b border-gray-200 pb-4 md:pb-2 ">
       <div className="col-span-2 md:col-span-3 ">
-        <div className="bg-bg-color-two rounded-2xl p-4 aspect-square flex items-center justify-center overflow-hidden lg:w-[213px] lg:h-[196px] h-[60px] w-[60px]">
+        <div className="bg-bg-color-two rounded-2xl p-4 aspect-square flex items-center justify-center overflow-hidden lg:w-[213px] lg:h-[196px] md:w-[120px] md:h-[120px] h-[60px] w-[60px]">
           <Image
             src={item.image}
             alt={item.name}
-            width={164}
-            height={164}
-            sizes="(max-width: 768px) 44px, 164px"
-            className="h-auto w-auto max-h-[164px] max-w-[164px] lg:max-h-[164px] lg:max-w-[164px] rounded-2xl"
+            width={164} // Default width (fallback)
+            height={164} // Default height (fallback)
+            sizes="(max-width: 640px) 44px, (max-width: 768px) 100px, 164px"
+            className="h-[45px] w-[50px] md:h-[100px] md:w-[120px] lg:h-[164px] lg:w-[164px] rounded-2xl"
             priority={false}
           />
         </div>
@@ -59,13 +59,6 @@ export const CartItemSection = memo<CartItemProps>(function CartItemSection({
       <div className="col-span-3 md:col-span-3 font-medium text-gray-900 text-sm sm:text-base">
         <div className="flex items-center justify-between md:justify-start gap-2">
           <span>{item.name}</span>
-          {/* <button
-            onClick={handleRemove}
-            aria-label={`Remove ${item.name}`}
-            className="md:hidden p-2 rounded hover:bg-gray-100 hidden"
-          >
-            <Trash2 className="w-4 h-4 text-gray-700" />
-          </button> */}
         </div>
       </div>
 
@@ -101,7 +94,7 @@ export const CartItemSection = memo<CartItemProps>(function CartItemSection({
         </div>
       </div>
 
-      <div className="col-span-2 md:col-span-2 text-right font-bold text-gray-900 mt-3 md:mt-0">
+      <div className="col-span-2 md:col-span-2 text-right text-sm md:text-base font-semibold text-gray-900 mt-3 md:mt-0">
         {formatCurrency(item.price * item.quantity)}
       </div>
     </li>

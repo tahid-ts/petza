@@ -69,11 +69,13 @@ const CheckoutFormSection: React.FC = () => {
             <div className="flex  flex-col md:flex-row md:justify-between">
               <Title
                 align="left"
-                className="  lg:text-[48px] md:text-3xl text-2xl font-bold font-title text-start"
+                className="  lg:text-[48px] md:text-3xl text-2xl font-bold font-title text-start "
               >
                 Delivery Address
               </Title>
-              <p className=" text-textColor mb-7">Select Save Address</p>
+              <p className=" text-textColor mb-7 cursor-pointer">
+                Select Save Address
+              </p>
             </div>
             <div className="flex flex-col gap-5 md:mb-8 w-full">
               <InputField

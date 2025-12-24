@@ -127,7 +127,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, offer }) => {
             iconPosition="left"
             variant="primary-outline"
             size="none"
-            className="flex justify-between w-full max-w-[171px] h-14 whitespace-nowrap pr-2 cursor-pointer"
+            className="flex justify-between w-full max-w-[171px] h-12 whitespace-nowrap pr-2 cursor-pointer"
             icon={<PiHandbagSimple size={20} />}
             href={`/product-details/${id}`}
           >

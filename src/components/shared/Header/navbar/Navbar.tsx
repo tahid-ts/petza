@@ -54,14 +54,6 @@ const Navbar: React.FC<NavbarProps> = ({
       <Container className="flex items-center justify-between py-4 lg:py-5 h-14 lg:h-20">
         {/* Logo */}
         <Link href="/" className="shrink-0 lg:ml-0 ml-5">
-          {/* <Image
-            src="/img/logo/Logo.png"
-            alt="Logo"
-            width={177}
-            height={48}
-            priority
-            className="w-auto h-auto object-contain"
-          /> */}
           <Image
             src="/img/logo/Logo.png"
             width={177}
@@ -106,6 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({
                       {label}
                     </span>
                   }
+                  className="cursor-pointer"
                   menuItems={items}
                   labelClass="border-none! py-0! my-0! h-full"
                   position="bottom-center"

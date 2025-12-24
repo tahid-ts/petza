@@ -29,7 +29,7 @@ const ProductContent = () => {
   const increaseQuantity = () => setQuantity((prev) => prev + 1);
 
   return (
-    <div className="w-full lg:w-[420px] ">
+    <div className="w-full lg:pl-4">
       {/* Rating */}
       <div className="flex items-center gap-2 mb-3">
         <span className="flex gap-0.5">
@@ -41,7 +41,11 @@ const ProductContent = () => {
       </div>
 
       {/* Title */}
-      <Title align="left" size="2xl" className="font-bold mb-2">
+      <Title
+        align="left"
+        size="2xl"
+        className="font-bold mb-2 text-2xl! text-start"
+      >
         Dog Food Pedigree Pet Foods
       </Title>
 
@@ -124,7 +128,7 @@ const ProductContent = () => {
         <Button
           variant="primary-outline"
           iconPosition="left"
-          className="w-full pr-2 h-full"
+          className="w-full pr-2 h-12"
           icon={<PiHandbagSimple size={20} />}
           onClick={() => {
             addItem({
@@ -146,7 +150,7 @@ const ProductContent = () => {
         iconPosition="left"
         variant="primary-two"
         size="none"
-        className="flex justify-center items-center gap-2 w-full h-14 whitespace-nowrap mb-6 pr-2 cursor-pointer"
+        className="flex justify-center items-center gap-2 w-full h-12 whitespace-nowrap mb-6 pr-2 cursor-pointer"
         href="/cart"
         icon={<ShoppingCart size={20} />}
       >
@@ -162,7 +166,7 @@ const ProductContent = () => {
           <Link
             href={`https://wa.me/?text=${encodeURIComponent("))10110110011")}`}
             target="_blank"
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
+            className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
             aria-label="Share on WhatsApp"
           >
             <FaWhatsapp size={18} />
@@ -174,7 +178,7 @@ const ProductContent = () => {
               ""
             )}`}
             target="_blank"
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
+            className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
             aria-label="Share on Facebook"
           >
             <FaFacebookF size={18} />
@@ -186,7 +190,7 @@ const ProductContent = () => {
               ""
             )}`}
             target="_blank"
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
+            className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
             aria-label="Share on LinkedIn"
           >
             <FaLinkedinIn size={18} />
@@ -198,7 +202,7 @@ const ProductContent = () => {
               ""
             )}&title=${encodeURIComponent("")}`}
             target="_blank"
-            className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
+            className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
             aria-label="Share on Reddit"
           >
             <FaRedditAlien size={18} />

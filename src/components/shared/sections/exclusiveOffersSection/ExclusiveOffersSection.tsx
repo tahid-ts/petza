@@ -21,14 +21,14 @@ const ExclusiveOffersSection = () => {
         <MovingParticle
           speed={15}
           stopOnSmall
-          className="md:mt-20 mt-12    w-full   text-center flex items-center justify-center"
+          className="md:mt-20 mt-12    w-full   text-center flex items-center justify-center mx-auto"
         >
           <Image
             src="/img/cat-shape/cat-thumb1.png"
             alt="Hero"
             width={760}
             height={335}
-            className="md:w-[760px] w-[354px] md:h-[335px] h-[156px] ml-5 md:ml-0"
+            className="md:w-[760px] w-[354px] md:h-[335px] h-[156px] ml-5 md:ml-0 mx-auto"
           />
         </MovingParticle>
       </div>

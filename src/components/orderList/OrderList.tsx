@@ -162,7 +162,7 @@ const OrderRow: React.FC<{ order: Order }> = ({ order }) => {
         {/* Action */}
         <div>
           <div className="text-xs text-gray-500 mb-1">Action</div>
-          <Button size="sm">View Details</Button>
+          <Button size="md">View Details</Button>
         </div>
       </div>
 

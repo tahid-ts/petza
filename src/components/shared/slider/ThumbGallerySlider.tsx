@@ -111,7 +111,7 @@ export default function ThumbGallerySlider({
         </div>
 
         {/* Main Image Swiper */}
-        <div className="lg:w-[684px] md:w-[80%] w-full flex order-1 md:order-2 bg-bg-color-two rounded-lg ">
+        <div className="2xl:w-[684px] md:w-[80%] w-full flex order-1 md:order-2 bg-bg-color-two rounded-lg ">
           <Swiper
             onSwiper={setMainSwiper}
             spaceBetween={10}

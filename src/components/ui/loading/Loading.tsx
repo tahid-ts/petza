@@ -27,7 +27,7 @@ const Loading: React.FC<LoadingProps> = ({ isLoading }) => {
   }
 
   return (
-    <div className="fixed inset-0 z-1000 overflow-hidden">
+    <div className="fixed inset-0 z-1002 overflow-hidden">
       <div
         className={`
         absolute inset-0 z-30 flex items-center justify-center

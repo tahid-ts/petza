@@ -23,15 +23,15 @@ const SignIn = () => {
                 alt="Sign In Image"
                 width={600}
                 height={575}
-                className="h-[575px] w-[600px]"
+                className="xl:h-[575px] md:h-[400px] lg:h-[480px] xl:w-[600px] h-full w-full"
               />
             </div>
           </div>{" "}
           <div className="bg-bg-color-one rounded-r-2xl flex items-center justify-center">
-            <div className="flex flex-col w-full lg:px-16">
+            <div className="flex flex-col w-full px-8 lg:px-16">
               <div className="flex flex-col lg:p-10 p-5 gap-5">
                 <Title className="font-bold text-dark whitespace-nowrap">
-                  Log in to your account
+                  Log in to\n your account
                 </Title>
                 <Title
                   size="lg"

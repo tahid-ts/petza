@@ -20,7 +20,7 @@ const FaqImage: React.FC<FaqImageProps> = ({ images }) => {
             alt={img.alt}
             width={213}
             height={609}
-            className="md:w-full md:h-[609px] w-[117px] h-[336px] object-cover rounded "
+            className="md:w-full xl:h-[609px] md:h-[374px] w-[117px] h-[336px] object-cover rounded "
           />
         </div>
       ))}
